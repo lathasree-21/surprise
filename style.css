@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI';
+    text-align: center;
+}
+
+/* BACKGROUNDS */
+.bg1 {
+    background: url("images/bg1.jpeg") no-repeat center/cover;
+    height: 100vh;
+}
+
+.bg2 {
+    background: url("images/bg2.jpeg") no-repeat center/cover;
+    min-height: 100vh;
+}
+
+/* GLASS EFFECT */
+.glass {
+    background: rgba(0,0,0,0.4);
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    color: white;
+}
+
+/* CENTER */
+.center {
+    margin-top: 200px;
+}
+
+/* INPUT + BUTTON */
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff4d88;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ERROR */
+#error {
+    display: none;
+}
+#error img {
+    width: 280px;   /* increase size */
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+/* SUCCESS */
+#success {
+    display: none;
+    font-size: 20px;
+    color: lightgreen;
+}
+
+/* TITLE */
+.title {
+    margin-top: 40px;
+    color: white;
+}
+
+.glow {
+    text-shadow: 0 0 10px pink, 0 0 20px white;
+}
+
+/* TYPING */
+.typing {
+    color: white;
+    margin-top: 20px;
+}
+
+/* HEARTS */
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    bottom: -20px;
+    animation: float 5s linear;
+}
+
+@keyframes float {
+    0% {transform: translateY(0); opacity:1;}
+    100% {transform: translateY(-100vh); opacity:0;}
+}
+
+/* GIFTS */
+.gifts {
+    margin-top: 40px;
+}
+
+.box {
+    width: 180px;
+    height: 180px;
+    background: white;
+    margin: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.box.open img {
+    display: block;
+}
+.box.open {
+    font-size: 0;
+}
